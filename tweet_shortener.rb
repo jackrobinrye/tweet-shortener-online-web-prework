@@ -18,7 +18,6 @@ end
 def word_substituter(tweet)
   each_word = tweet.split(" ")
   each_word.each do |word|
-    binding.pry
     if dictionary.include?(word.downcase)
       word = dictionary[word.downcase]
       binding.pry
