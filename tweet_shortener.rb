@@ -17,11 +17,9 @@ end
 
 def word_substituter(tweet)
   each_word = tweet.split(" ")
-  each_word.each do |word|
+  each_word.collect do |word|
     if dictionary.include?(word.downcase)
       word = dictionary[word.downcase]
-      binding.pry
     end
   end
-  each_word.join(" ")
 end
